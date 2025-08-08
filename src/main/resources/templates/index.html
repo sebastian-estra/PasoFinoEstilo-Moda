@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasoFinoEstilo&Moda</title><!--AQUI ES DONDE SE PONE EL TITULO DE LA PAGINA-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="index.css"> -->
+    <link rel="stylesheet" href="/css/index.css">
+    <script src='/js/productos.js'></script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-left">
+            <img src="/img/nuevo logo2.png" alt="Logo VetLife" class="logo">
+        </div>
+        <div class="buscador-container">
+            <input type="text" id="buscador" placeholder="Buscar productos..." />
+            <button onclick="buscarProducto()">🔍</button>
+        </div>
+        <div class="header-right">
+            <button onclick="location.href='/login '">Iniciar Sesión</button>
+            <!--- <button onclick="location.href='/login '">Registrarse</button>-->
+        </div>
+    </header>
+
+
+
+    <!--barra de nabegacion-->
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">&#9776;</button>
+            <div class="dropdown-content">
+                <nav>
+                    <ul>
+                        <li><a href="/Medicamentos">Medicamentos</a></li>
+                        <li><a href="/CuidadoPersonaleHigiene">Cuidado Personal e Higiene</a></li>
+                        <li><a href="/SaludyBienestar">Salud y Bienestar</a></li>
+                        <li><a href="/PrimerosAuxilios">Primeros Auxilios</a></li>
+                        <li><a href="/CuidadodelBebéydelaMamá">Cuidado del Bebé y de la Mamá</a></li>
+                        <li><a href="/Cosméticos">Cosméticos</a></li>
+                        <li><a href="/DispositivosMédicosyOrtopedia">Dispositivos Médicos y Ortopedia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!--compra y carrito de compra-->
+
+        <button id="carrito-principal" class="agregar-al-carrito" onclick="window.location.href='/carrito/ver'">
+            <span class="icono-carrito">&#128722;</span>
+            <div id="carrito-contenido" class="oculto"></div>
+            Ver carrito
+        </button>
+
+
+    </div>
+
+    <!--galeria de las fotos-->
+    <div class="galeria-slider">
+        <div class="galeria" id="galeria">
+            <div class="slide" style="background-image: url('/img/Captura1.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura2.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura3.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura4.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura5.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura6.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura7.png');"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--productos de los que se van a comprar-
+    <section id="Medicamentos">
+        <h2><a href="/Medicamentos" target="_blank">Medicamentos</a></h2>
+        <div class="producto-contenedor" id="contenedor-medicamentos">
+        </div>
+    </section>-->
+
+</body>
+</html>

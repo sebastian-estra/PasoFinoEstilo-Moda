@@ -1,0 +1,172 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+
+  /*este es el encabesado */
+  header {
+    background-color: #1f5ea7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-left {
+      display: flex;
+      align-items: center;
+  }
+
+  .header-left .logo {
+      height: 100px;
+      margin-right: 15px;
+  }
+
+  .header-right {
+      display: flex;
+      align-items: center;
+  }
+
+  .header-right h1 {
+      margin: 0 20px 0 0;
+      font-size: 1.5em;
+  }
+
+  .header-right button {
+      background-color: #7f94f1;
+      border: none;
+      padding: 10px 20px;
+      margin-left: 10px;
+      cursor: pointer;
+  }
+
+   /*estilo para la busqueda */
+  .buscador-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: rgb(140, 176, 243);
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  #buscador {
+    padding: 6px 12px;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #44aaee;
+  }
+
+  /*este es lo que esta dentro del menu */
+  nav ul {
+      list-style-type: none;
+      padding: 0;
+      background-color: rgb(42, 230, 151, 0.767 );/* este es color que se muestra primero */
+  }
+
+  nav ul li {
+      display: inline;
+      margin-right: 10px;
+  }
+
+  nav ul li a {
+      text-decoration: none;
+      color: rgb(228, 33, 33);
+  }
+  /*---------- AQUI TERMINA EL MENU -----------*/
+
+   /*-------- ACA COMIENSA EL ESTILO DEL CARRITO --------- */
+
+  #carrito-principal {
+    margin: 5px 0 5px auto;
+    max-width: 150px;
+    padding: 17px;
+}
+
+
+  .agregar-al-carrito {
+      background-color: #4caf50; /* Color de fondo verde */
+      color: white; /* Color del texto blanco */
+      border: none; /* Sin borde */
+      padding: 15px 15px; /* Relleno interno */
+      text-align: center; /* Alineación de texto al centro */
+      text-decoration: none; /* Sin decoración de texto */
+      display: inline-block; /* Visualización en línea */
+      font-size: 12px; /* Tamaño de fuente */
+      cursor: pointer; /* Cursor tipo puntero */
+      border-radius: 5px; /* Bordes redondeados */
+      margin-left: auto; /* Mueve el botón hacia la derecha */
+      display: flex; /* Utiliza flexbox para centrar verticalmente */
+      align-items: center; /* Centra verticalmente el contenido */
+  }
+
+  .agregar-al-carrito:hover {/* Cambia el color al pasar sobre el botón */
+      background-color: rgb(64, 114, 161); 
+  }
+
+  /*barra del menu */
+
+    
+    
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: rgba(219, 146, 62, 0.623);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: rgb(15, 15, 15);
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: rgba(42, 230, 151, 0.767);/*este es el color de las baras de arriba */
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+      background-color:rgba(79, 183, 243, 0.986);/* este es el color de la selecion de por dentro */
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+
+  
+  
