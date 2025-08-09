@@ -1,0 +1,68 @@
+<div th:fragment="cabecera">
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <div class="header-left">
+            <img src="/img/nuevo logo2.png" alt="Logo PasoFino" class="logo">
+        </div>
+
+        <!-- Menú escritorio (PC) -->
+        <nav class="menu-escritorio">
+            <ul>
+                <li><a href="/#">#</a></li>
+                <li><a href="/#">#</a></li>
+                <li><a href="/#">#</a></li>
+                <li><a href="/#">#</a></li>
+                <li><a href="/#">#</a></li>
+                <li><a href="/#">#</a></li>
+                <li><a href="/#">#</a></li>
+            </ul>
+        </nav>
+
+        <button id="carrito-principal" class="agregar-al-carrito" onclick="window.location.href='/carrito/ver'">
+            <span class="icono-carrito">&#128722;</span>
+            <div id="carrito-contenido" class="oculto"></div>
+
+        </button>
+
+        <div class="header-right">
+            <button onclick="location.href='/login'">Iniciar Sesión</button>
+            <!-- Botón hamburguesa debajo -->
+            <button id="menu-btn" class="hamburger">&#9776;</button>
+        </div>
+    </header>
+
+
+    <!-- Menú móvil (off-canvas) -->
+    <nav id="side-menu" class="menu-movil">
+        <button id="close-menu" class="close-btn">&times;</button>
+        <ul>
+            <li><a href="/#">#</a></li>
+            <li><a href="/#">#</a></li>
+            <li><a href="/#">#</a></li>
+            <li><a href="/#">#</a></li>
+            <li><a href="/#">#</a></li>
+            <li><a href="/#">#</a></li>
+            <li><a href="/#">#</a></li>
+        </ul>
+    </nav>
+
+    <!-- Botón de carrito --
+    <button id="carrito-principal" class="agregar-al-carrito" onclick="window.location.href='/carrito/ver'">
+        <span class="icono-carrito">&#128722;</span>
+        <div id="carrito-contenido" class="oculto"></div>
+
+    </button>-->
+
+    <!-- Galería de imágenes 
+    <div class="galeria-slider">
+        <div class="galeria" id="galeria">
+            <div class="slide" style="background-image: url('/img/Captura1.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura2.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura3.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura4.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura5.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura6.png');"></div>
+            <div class="slide" style="background-image: url('/img/Captura7.png');"></div>
+        </div>
+    </div>-->
+</div>

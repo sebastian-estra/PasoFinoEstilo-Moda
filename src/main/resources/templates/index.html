@@ -7,70 +7,74 @@
   <title>PasoFinoEstilo&Moda</title>
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/cabeza y piepagina/cabeza y piepagina.css">
   <script src="/js/index.js" defer></script>
 </head>
 <body>
 
-  <!-- Encabezado -->
-  <header class="encabezado">
-    <div class="header-left">
-      <img src="/img/nuevo logo2.png" alt="Logo PasoFino" class="logo">
+
+  <div th:replace="cabeza y piepagina/cabeza.html :: cabecera"></div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+ <h1>Somos Paso Fino Estilo & Moda</h1>
+<p>
+    En <strong>Paso Fino Estilo & Moda</strong> nos especializamos en ofrecer calzado, ropa y una amplia variedad 
+    de accesorios como gorras, bolsos y mucho más. Nuestro objetivo es brindarte las últimas tendencias 
+    de la moda, combinando calidad, estilo y precios accesibles para que siempre luzcas increíble.
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  <section class="info-section">
+    <div class="info-card">
+        <img src="img/envios-100x100.png" alt="Envíos">
+        <h3>Envíos</h3>
+        <p>Haz tu pedido con confianza, nosotros nos encargamos de enviarlo.</p>
+        <a href="/envios" class="btn-link">ver más</a>
     </div>
 
-    <!-- Menú escritorio (PC) -->
-  <nav class="menu-escritorio">
-    <ul>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-    </ul>
-  </nav>
-
-    <div class="header-right">
-      <button onclick="location.href='/login'">Iniciar Sesión</button>
-      <!-- Botón hamburguesa debajo -->
-      <button id="menu-btn" class="hamburger">&#9776;</button>
+    <div class="info-card">
+        <img src="img/contacto-100x100.png" alt="Contacto">
+        <h3>Contacto</h3>
+        <p>Contáctanos si tienes alguna inquietud acerca de tu producto.</p>
+        <a href="/contacto" class="btn-link">ver más</a>
     </div>
-  </header>
 
-
-  <!-- Menú móvil (off-canvas) -->
-  <nav id="side-menu" class="menu-movil">
-    <button id="close-menu" class="close-btn">&times;</button>
-    <ul>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-      <li><a href="/#">#</a></li>
-    </ul>
-  </nav>
-
-  <!-- Botón de carrito -->
-  <button id="carrito-principal" class="agregar-al-carrito" onclick="window.location.href='/carrito/ver'">
-    <span class="icono-carrito">&#128722;</span>
-    <div id="carrito-contenido" class="oculto"></div>
-    Ver carrito
-  </button>
-
-  <!-- Galería de imágenes -->
-  <div class="galeria-slider">
-    <div class="galeria" id="galeria">
-      <div class="slide" style="background-image: url('/img/Captura1.png');"></div>
-      <div class="slide" style="background-image: url('/img/Captura2.png');"></div>
-      <div class="slide" style="background-image: url('/img/Captura3.png');"></div>
-      <div class="slide" style="background-image: url('/img/Captura4.png');"></div>
-      <div class="slide" style="background-image: url('/img/Captura5.png');"></div>
-      <div class="slide" style="background-image: url('/img/Captura6.png');"></div>
-      <div class="slide" style="background-image: url('/img/Captura7.png');"></div>
+    <div class="info-card">
+        <img src="img/terminos-y-condiciones.png" alt="Términos y condiciones">
+        <h3>Términos y condiciones</h3>
+        <p>Conoce los términos y condiciones de nuestra página.</p>
+        <a href="/terminos" class="btn-link">ver más</a>
     </div>
-  </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  <div th:replace="cabeza y piepagina/piepagina.html :: piepagina"></div>
 
 </body>
 </html>
