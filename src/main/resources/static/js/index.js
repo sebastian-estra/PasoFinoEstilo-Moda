@@ -1,17 +1,25 @@
- const menuBtn = document.getElementById('menu-btn');
-    const sideMenu = document.getElementById('side-menu');
-    const closeBtn = document.getElementById('close-menu');
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menu-btn');
+  const sideMenu = document.getElementById('side-menu');
+  const closeBtn = document.getElementById('close-menu');
 
+  if (menuBtn && sideMenu) {
     menuBtn.addEventListener('click', () => {
       sideMenu.classList.add('open');
+      sideMenu.setAttribute('aria-hidden', 'false');
     });
+  }
 
+  if (closeBtn && sideMenu) {
     closeBtn.addEventListener('click', () => {
       sideMenu.classList.remove('open');
+      sideMenu.setAttribute('aria-hidden', 'true');
     });
-    // Cierra el menú al hacer click en un enlace
-    document.querySelectorAll('.menu-movil a').forEach(link => {
-      link.addEventListener('click', () => {
-        sideMenu.classList.remove('open');
-      });
+  }
+
+  document.querySelectorAll('.menu-movil a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (sideMenu) sideMenu.classList.remove('open');
     });
+  });
+});

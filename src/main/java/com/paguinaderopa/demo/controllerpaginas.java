@@ -13,17 +13,17 @@ public class controllerpaginas {
 
     @GetMapping("/envios")
     public String envios() {
-        return "envios"; // retorna envios.html
+        return "otros links/envios"; // retorna envios.html
     }
 
     @GetMapping("/contacto")
     public String contacto() {
-        return "contacto"; // retorna contacto.html
+        return "otros links/contacto"; // retorna contacto.html
     }
 
     @GetMapping("/terminos")
     public String terminos() {
-        return "terminos"; // retorna terminos.html
+        return "otros links/terminos"; // retorna terminos.html
     }
 
 }

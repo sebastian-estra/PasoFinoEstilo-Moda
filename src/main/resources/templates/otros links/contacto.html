@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/estilos/estilos.css">
+    <link rel="stylesheet" href="/css/cabeza y piepagina/cabeza y piepagina.css">
+    <script src="/js/index.js"></script>
+</head>
+<body>
+
+    <div th:replace="cabeza y piepagina/cabeza.html :: cabecera"></div>
+
+    <header>
+        <h1>Contacto</h1>
+    </header>
+
+    <main class="contacto-container">
+        <section class="contacto-form">
+            <p class="contacto-descripcion">
+                Puedes contactarnos dejando tu mensaje aquí o escribiendo a nuestro
+                Whatsapp, resolveremos todas las preguntas que tengas en el menor tiempo posible.
+            </p>
+
+            <form action="#" method="post" class="formulario">
+                <div class="form-row">
+                    <input type="text" name="nombre" placeholder="Nombre*" required>
+                    <input type="email" name="email" placeholder="Email*" required>
+                </div>
+                <input type="text" name="asunto" placeholder="Asunto*" required>
+                <textarea name="mensaje" placeholder="Tu mensaje*" required></textarea>
+                <button type="submit" class="btn-enviar">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <div class="contact-icons">
+            <a href="https://wa.me/573006704462" target="_blank" class="icon whatsapp">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+            <a href="https://www.google.com/maps/place/Bogotá,+Colombia" target="_blank" class="icon location">
+                <i class='bx bx-map'></i>
+            </a>
+            <a href="https://www.instagram.com/tu_usuario" target="_blank" class="icon instagram">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://www.facebook.com/tu_pagina" target="_blank" class="icon facebook">
+                <i class='bx bxl-facebook'></i>
+            </a>
+        </div>
+
+
+    </main>
+
+    <div th:replace="cabeza y piepagina/piepagina.html :: piepagina"></div>
+
+</body>
+</html>
