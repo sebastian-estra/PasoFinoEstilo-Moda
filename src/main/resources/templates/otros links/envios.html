@@ -11,7 +11,7 @@
 </head>
 <body>
     
-<div th:replace="cabeza y piepagina/cabeza.html :: cabecera"></div>
+<div th:replace="~{cabeza y piepagina/cabeza.html :: cabecera}"></div>
 
 <header>
     <h1>Envíos</h1>
@@ -31,7 +31,6 @@
     <a href="/" class="btn-volver">Volver a inicio</a>
 </main>
 
-<div th:replace="cabeza y piepagina/piepagina.html :: piepagina"></div>
-<script src="/js/index.js"></script>
+<div th:replace="~{cabeza y piepagina/piepagina.html :: piepagina}"></div>
 </body>
 </html>

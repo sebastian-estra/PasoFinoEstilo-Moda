@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sideMenu = document.getElementById('side-menu');
   const closeBtn = document.getElementById('close-menu');
 
+  // Abrir menú lateral
   if (menuBtn && sideMenu) {
     menuBtn.addEventListener('click', () => {
       sideMenu.classList.add('open');
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Cerrar menú lateral
   if (closeBtn && sideMenu) {
     closeBtn.addEventListener('click', () => {
       sideMenu.classList.remove('open');
@@ -17,8 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Manejo de enlaces del menú móvil
   document.querySelectorAll('.menu-movil a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      // Si el enlace es para abrir submenú, NO cerrar el menú principal
+      if (link.classList.contains('toggle-submenu')) {
+        e.preventDefault(); // Evita salto de página
+        e.stopPropagation(); // Evita cierre del menú
+        let submenu = link.nextElementSibling;
+        submenu.classList.toggle('open');
+        return;
+      }
+      // Si no es submenú, cerrar el menú lateral
       if (sideMenu) sideMenu.classList.remove('open');
     });
   });

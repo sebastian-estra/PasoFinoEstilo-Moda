@@ -1,50 +1,61 @@
 <div th:fragment="cabecera">
-    <!-- Encabezado -->
     <header class="encabezado">
         <div class="header-left">
             <img src="/img/nuevo logo2.png" alt="Logo PasoFino" class="logo">
         </div>
 
-        <!-- Menú escritorio (PC) -->
+        <!-- Menú escritorio -->
         <nav class="menu-escritorio">
             <ul>
-                <li><a href="/#">#</a></li>
-                <li><a href="/#">#</a></li>
-                <li><a href="/#">#</a></li>
-                <li><a href="/#">#</a></li>
-                <li><a href="/#">#</a></li>
-                <li><a href="/#">#</a></li>
-                <li><a href="/#">#</a></li>
+                <li><a href="/tienda" class="oferta">¡Nueva Colección!</a></li>
+
+                <!-- Categorías con submenú -->
+                <li class="dropdown">
+                    <a href="#">Categorías</a>
+                    <ul class="submenu">
+                        <li><a href="/tienda?categoria=zapatos">Zapatos</a></li>
+                        <li><a href="/tienda?categoria=ropa">Ropa</a></li>
+                        <li><a href="/tienda?categoria=accesorios">Accesorios</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/ofertas" class="descuento">Ofertas %</a></li>
+                <li><a href="/destacados">Destacados</a></li>
+                <li><a href="/contacto">Contacto</a></li>
             </ul>
         </nav>
 
         <button id="carrito-principal" class="agregar-al-carrito" onclick="window.location.href='/carrito/ver'">
             <span class="icono-carrito">&#128722;</span>
             <div id="carrito-contenido" class="oculto"></div>
-
         </button>
 
         <div class="header-right">
             <button onclick="location.href='/login'">Iniciar Sesión</button>
-            <!-- Botón hamburguesa debajo -->
             <button id="menu-btn" class="hamburger">&#9776;</button>
         </div>
     </header>
 
+    <!-- Menú móvil -->
+    <nav id="side-menu" class="menu-movil" aria-hidden="true">
+  <button id="close-menu" class="close-btn">&times;</button>
+  <ul>
+    <li><a href="d">¡Nueva Colección!</a></li>
 
-    <!-- Menú móvil (off-canvas) -->
-    <nav id="side-menu" class="menu-movil">
-        <button id="close-menu" class="close-btn">&times;</button>
-        <ul>
-            <li><a href="/#">#</a></li>
-            <li><a href="/#">#</a></li>
-            <li><a href="/#">#</a></li>
-            <li><a href="/#">#</a></li>
-            <li><a href="/#">#</a></li>
-            <li><a href="/#">#</a></li>
-            <li><a href="/#">#</a></li>
-        </ul>
-    </nav>
+    <!-- Botón Categorías con submenú -->
+    <li>
+      <a  class="toggle-submenu">Categorías</a>
+      <ul class="submenu-movil">
+        <li><a href="d">Zapatos</a></li>
+        <li><a href="d">Ropa</a></li>
+        <li><a href="d">Accesorios</a></li>
+      </ul>
+    </li>
 
+    <li><a href="d">Ofertas %</a></li>
+    <li><a href="d">Destacados</a></li>
+    <li><a href="d">Contacto</a></li>
+  </ul>
+</nav>
 
 </div>

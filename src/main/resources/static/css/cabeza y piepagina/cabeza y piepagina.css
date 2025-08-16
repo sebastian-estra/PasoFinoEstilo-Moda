@@ -3,7 +3,7 @@
    ===================== */
 header {
   /* Barra superior azul */
-  background-color: #1f5ea7;
+  background-color: #f5efcebb;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -18,6 +18,131 @@ header {
   height: 100px;
   margin-right: 15px;
 }
+
+
+.menu-escritorio ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-escritorio a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.menu-escritorio a:hover {
+    background-color: #ff6600;
+    color: white;
+    border-radius: 5px;
+}
+
+.menu-escritorio a.oferta {
+    color: #d10000;
+}
+
+.menu-escritorio a.descuento {
+    background-color: gold;
+    border-radius: 5px;
+}
+
+
+.menu-escritorio ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-escritorio li {
+    position: relative;
+}
+
+.menu-escritorio a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 180px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu-escritorio ul {
+        flex-direction: column;
+    }
+    .submenu {
+        position: static;
+        box-shadow: none;
+        display: none;
+    }
+}
+
+
+/* Submenú PC */
+.menu-escritorio .submenu {
+    display: none;
+    position: absolute;
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.menu-escritorio li {
+    position: relative;
+}
+.menu-escritorio li:hover .submenu {
+    display: block;
+}
+.menu-escritorio .submenu li {
+    padding: 5px 20px;
+}
+.menu-escritorio .submenu li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Submenú móvil oculto por defecto */
+.submenu-movil {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+.submenu-movil li a {
+    display: block;
+    /*padding: 5px 0;*/
+}
+
+/* Cuando se abra el submenú móvil */
+.submenu-movil.open {
+    display: block;
+}
+
+.menu-movil .submenu-movil {
+  display: none;
+}
+
+.menu-movil .submenu-movil.open {
+  display: block;
+}
+
+
 
 /* =====================
    MENÚ ESCRITORIO (PC)
@@ -55,7 +180,7 @@ header {
   transition: color 0.3s;
 }
 .menu-escritorio li a:hover {
-  color: #007bff;
+  color: #ecf0f5;
 }
 
 /* =====================
@@ -260,8 +385,8 @@ body {
    ESTILOS GENERALES DEL FOOTER
    ===================== */
   .footer {
-      background-color: #0b2154;
-      color: white;
+      background-color: #f5efcebb;
+      color: rgb(80, 80, 80);
       padding: 40px 20px;
       font-family: Arial, sans-serif;
       font-size: 14px;
@@ -281,7 +406,7 @@ body {
   }
 
   .footer-column h4 {
-      color: #fff;
+      color: #4d4d4d;
       font-size: 16px;
       margin-bottom: 10px;
   }
@@ -293,11 +418,11 @@ body {
 
   .footer-column ul li {
       margin-bottom: 6px;
-      color: #ddd;
+      color: #272727;
   }
 
   .footer-column ul li a {
-      color: #ddd;
+      color: #5c5c5c;
       text-decoration: none;
   }
 
@@ -322,7 +447,7 @@ body {
   .payment-methods i {
       font-size: 40px;
       margin: 0 15px;
-      color: white;
+      color: rgb(59, 59, 59);
       transition: color 0.3s ease;
   }
 
@@ -355,7 +480,7 @@ body {
 
   .social-icons a {
       margin: 0 10px;
-      color: white;
+      color: rgb(80, 80, 80);
       font-size: 20px;
       text-decoration: none;
   }
