@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/carrito/carrito.css">
+    <title>Carrito | Paso Fino Estilo & Moda</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Subtotal</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="p : ${carrito}">
+                <td>
+                    <img th:src="@{/uploads/{img}(img=${p.imagen})}" alt="imagen" width="100" />
+                </td>
+                <td th:text="${p.nombre}">Nombre</td>
+                <td th:text="${p.cantidad}">Cantidad</td>
+                <td th:text="${#numbers.formatDecimal(p.precio, 0, 'POINT', 0, 'POINT')}">Precio</td>
+                <td th:text="${#numbers.formatDecimal(p.precio * p.cantidad, 0, 'POINT', 0, 'POINT')}">Subtotal</td>
+                <td class="acciones">
+                    <form th:action="@{/carrito/disminuir}" method="post">
+                        <input type="hidden" name="id" th:value="${p.id}" />
+                        <button type="submit" class="btn-disminuir">-</button>
+                    </form>
+
+                    <form th:action="@{/carrito/aumentar}" method="post">
+                        <input type="hidden" name="id" th:value="${p.id}" />
+                        <button type="submit" class="btn-aumentar">+</button>
+                    </form>
+
+                    <form th:action="@{/carrito/quitar}" method="post">
+                        <input type="hidden" name="id" th:value="${p.id}" />
+                        <button type="submit" class="btn-quitar">Quitar</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="total-container">
+        <p>
+            <strong>Total:</strong>
+            <button disabled class="button-link btn-total">
+                $<span th:text="${#numbers.formatDecimal(total, 0, 'POINT', 0, 'POINT')}"></span>
+            </button>
+        </p>
+
+       <a th:href="@{/checkout}" class="button-link btn-whatsapp">Comprar</a>
+
+    </div>
+</body>
+</html>
